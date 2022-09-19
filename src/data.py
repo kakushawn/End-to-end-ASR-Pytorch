@@ -68,6 +68,8 @@ def create_dataset(tokenizer, ascending, name, path, bucketing, batch_size,
     # Recognize corpus
     if name.lower() == "librispeech":
         from corpus.librispeech import LibriDataset as Dataset
+    elif name.lower() == "tcc300":
+        from corpus.tcc300 import TCC300Dataset as Dataset
     else:
         raise NotImplementedError
 
